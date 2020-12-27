@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contact US</title>
+  </head>
+  <body class="container__contact-page">
+    <div class="contact-form__container">
+      <div class="contact-form--box">
+        <div class="contact-form__login login active">
+          <h2 class="heading-2 mb-md">Welcome Back</h2>
+          <div class="contact-form__icon--container">
+            <button class="btn contact-form__btn contact-form__btn--gh">
+              <svg class="contact-form--icon">
+                <use xlink:href="img/sprite.svg#github"></use>
+              </svg>
+              <span>Github</span>
+            </button>
+            <button class="btn contact-form__btn contact-form__btn--g">
+              <svg class="contact-form--icon">
+                <use xlink:href="img/sprite.svg#google-plus"></use>
+              </svg>
+              <span>Google</span>
+            </button>
+          </div>
+          <p class="paragraph mt-sm">or Log in with your email</p>
+          <form action="#" class="form mt-sm">
+            <label for="login-email">
+              <input
+                type="email"
+                id="login-email"
+                class="form__email"
+                placeholder="Enter your email address"
+                required
+            /></label>
+            <label for="login-password">
+              <input
+                type="password"
+                id="login-password"
+                class="form__password"
+                placeholder="Enter your Password"
+                required
+              />
+            </label>
+            <a href="#0" class="form__link">Forgot your Password?</a>
+            <button class="btn form__btn">Log in</button>
+          </form>
+        </div>
+        <div class="contact-form__signup signup signup-before">
+          <h2 class="heading-2 mb-md">Join us</h2>
+          <div class="contact-form__icon--container">
+            <button class="btn contact-form__btn contact-form__btn--gh">
+              <svg class="contact-form--icon">
+                <use xlink:href="img/sprite.svg#github"></use>
+              </svg>
+              <span>Github</span>
+            </button>
+            <button class="btn contact-form__btn contact-form__btn--g">
+              <svg class="contact-form--icon">
+                <use xlink:href="img/sprite.svg#google-plus"></use>
+              </svg>
+              <span>Google</span>
+            </button>
+          </div>
+          <p class="paragraph mt-sm">or use your email for registration</p>
+          <form action="#" class="form mt-sm">
+            <label for="name">
+              <input
+                type="text"
+                id="name"
+                class="form__name"
+                placeholder="Enter your name"
+                required
+            /></label>
+            <label for="signup-email">
+              <input
+                type="email"
+                id="signup-email"
+                class="form__email"
+                placeholder="Enter your email"
+                required
+              />
+            </label>
+            <label for="signup-password">
+              <input
+                type="password"
+                id="signup-password"
+                class="form__password"
+                placeholder="Choose your Password"
+                required
+              />
+            </label>
+            <button class="btn form__btn">Share your experience</button>
+          </form>
+        </div>
+        <div class="overlay">
+          <div class="overlay__container">
+            <div class="overlay__left left-panel">
+              <h2 class="heading-2 mb-sm white-text">Welcome Back</h2>
+              <p class="paragraph mb-md white-text">
+                To keep connected with us please login with your personal info
+              </p>
+              <button class="btn overlay__btn login-toggler">log in</button>
+            </div>
+            <div class="overlay__right active right-panel">
+              <h2 class="heading-2 mb-sm">
+                <span class="heading-2--main">Hello,</span>
+                <span class="heading-2--sub">Developers!</span>
+              </h2>
+              <p class="paragraph mb-md white-text">
+                Join millions of people sharing their experience
+              </p>
+              <button class="btn overlay__btn signup-toggler">sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

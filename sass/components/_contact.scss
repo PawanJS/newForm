@@ -1,0 +1,190 @@
+.contact-form {
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(3rem, 1fr) 1fr 4fr 1fr minmax(3rem, 1fr);
+  }
+
+  &--box {
+    position: relative;
+    grid-column: 3 / 4;
+    display: grid;
+    box-shadow: 0 1rem 3rem rgba($color-dark, 0.4);
+    background-color: $color-white;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__login,
+  &__signup {
+    padding: 5rem;
+    background-color: $color-white;
+    display: grid;
+    text-align: center;
+    transition: all 1.2s;
+  }
+
+  &__icon--container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    justify-items: center;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &--gh {
+      background-color: $bg-color;
+      color: $color-dark;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $color-blue-dark;
+        color: $color-white;
+      }
+    }
+  }
+
+  &--icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.contact-form__btn--g,
+.form__btn {
+  background-color: $color-blue;
+  transition: all 0.2s;
+
+  svg {
+    fill: $color-white;
+  }
+
+  &:hover {
+    background-color: $color-blue-dark;
+  }
+}
+
+.form {
+  display: grid;
+  grid-row-gap: 2rem;
+
+  &__email,
+  &__name,
+  &__password {
+    font-size: 1.6rem;
+    font-family: inherit;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    background-color: $bg-color;
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-green;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-red;
+    }
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $color-dark;
+    transition: all 0.2s;
+
+    &:hover {
+      word-spacing: 0.1rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  &__btn {
+    &:hover {
+      word-spacing: 0.1rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  display: grid;
+  height: 100%;
+
+  &__container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__right,
+  &__left {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  &__right {
+    background: linear-gradient(
+      to right bottom,
+      $color-gradient,
+      $color-gradient-2
+    );
+    transform: translateX(-100%);
+  }
+
+  &__left {
+    background: linear-gradient(
+      to right bottom,
+      $color-gradient-2,
+      $color-gradient
+    );
+    transform: translateX(100%);
+  }
+
+  &__btn {
+    background: transparent;
+    border: 2px solid $bg-color;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-blue;
+      border: 2px solid transparent;
+      word-spacing: 0.1rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+// * ADD THIS CLASS WITH JAVASCRIPT TO TOGGLE SIGNUP OR LOGIN
+.active {
+  transform: translateX(0);
+  z-index: 10;
+  opacity: 1;
+}
+.login-before {
+  transform: translateX(50%);
+  opacity: 0;
+  z-index: -1;
+}
+.login-after {
+  transform: translateX(0);
+}
+.signup-before {
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: -1;
+}
+.signup-after {
+  transform: translateX(0);
+}
